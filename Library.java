@@ -75,6 +75,18 @@ public class Library
 		}
 		return newBooks;
 	}
+	public ArrayList<Book> getBooksWithRating(ArrayList<Book> selection,double rating)
+	{
+		ArrayList<Book> newBooks = new ArrayList<Book>();
+		for(int i = 0; i < selection.size(); i++)
+		{
+			if(selection.get(i).getRating() >= rating)
+			{
+				newBooks.add(selection.get(i));
+			}
+		}
+		return newBooks;
+	}
 	public ArrayList<Book> getBooks()
 	{
 		return Books;
