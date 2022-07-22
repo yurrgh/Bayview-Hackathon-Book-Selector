@@ -18,7 +18,7 @@ public class Library
 		}
 	}
 	
-	public String completeLibraray()
+	public String completeLibrary()
 	{
 		String complete ="";
 		for(int i = 0; i < Books.size(); i++)
