@@ -27,50 +27,50 @@ public class Library
 		}
 		return complete;
 	}
-	public ArrayList<Book> getBooksWithTitle(String s)
+	public ArrayList<Book> getBooksWithTitle(ArrayList<Book> selectedBooks, String s)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
-		for(int i = 0; i < Books.size(); i++)
+		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(Books.get(i).getTitle() == s)
+			if(selectedBooks.get(i).getTitle() == s)
 			{
-				newBooks.add(Books.get(i));
+				newBooks.add(selectedBooks.get(i));
 			}
 		}
 		return newBooks;
 	}
-	public ArrayList<Book> getBooksWithAuthor(String s)
+	public ArrayList<Book> getBooksWithAuthor(ArrayList<Book> selectedBooks,String s)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
-		for(int i = 0; i < Books.size(); i++)
+		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(Books.get(i).getAuthor() == s)
+			if(selectedBooks.get(i).getAuthor() == s)
 			{
-				newBooks.add(Books.get(i));
+				newBooks.add(selectedBooks.get(i));
 			}
 		}
 		return newBooks;
 	}
-	public ArrayList<Book> getBooksWithGenre(String s)
+	public ArrayList<Book> getBooksWithGenre(ArrayList<Book> selectedBooks,String s)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
-		for(int i = 0; i < Books.size(); i++)
+		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(Books.get(i).getCategory() == s)
+			if(selectedBooks.get(i).getCategory() == s)
 			{
-				newBooks.add(Books.get(i));
+				newBooks.add(selectedBooks.get(i));
 			}
 		}
 		return newBooks;
 	}
-	public ArrayList<Book> getBooksWithPages(int low, int high)
+	public ArrayList<Book> getBooksWithPages(ArrayList<Book> selectedBooks,int low, int high)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
-		for(int i = 0; i < Books.size(); i++)
+		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(Books.get(i).getPages() >= low && Books.get(i).getPages() <= high)
+			if(Books.get(i).getPages() >= low && selectedBooks.get(i).getPages() <= high)
 			{
-				newBooks.add(Books.get(i));
+				newBooks.add(selectedBooks.get(i));
 			}
 		}
 		return newBooks;
