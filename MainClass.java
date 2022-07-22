@@ -21,7 +21,6 @@ public class MainClass {
 		System.out.println("1. Title \n2. Author \n3. Category/Genre \n4. Pages \n5. Rating \nPlease select your filter(s)");
 		Scanner sc= new Scanner(System.in);
 		String selected = sc.nextLine();
-		System.out.println(selected);
 			for(int s =1;s<=5;s++)
 			{
 				if(selected.contains(Integer.toString(s)))
