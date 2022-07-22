@@ -27,12 +27,12 @@ public class Library
 		}
 		return complete;
 	}
-		public ArrayList<Book> getBooksWithTitle(ArrayList<Book> selectedBooks, String s)
+	public ArrayList<Book> getBooksWithTitle(ArrayList<Book> selectedBooks, String s)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
 		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(selectedBooks.get(i).getTitle().equals(s))
+			if(selectedBooks.get(i).getTitle().toLowerCase().contains(s.toLowerCase()))
 			{
 				newBooks.add(selectedBooks.get(i));
 			}
@@ -44,7 +44,7 @@ public class Library
 		ArrayList<Book> newBooks = new ArrayList<Book>();
 		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(selectedBooks.get(i).getAuthor().equals(s))
+			if(selectedBooks.get(i).getAuthor().toLowerCase().contains(s.toLowerCase()))
 			{
 				newBooks.add(selectedBooks.get(i));
 			}
@@ -56,7 +56,7 @@ public class Library
 		ArrayList<Book> newBooks = new ArrayList<Book>();
 		for(int i = 0; i < selectedBooks.size(); i++)
 		{
-			if(selectedBooks.get(i).getCategory().equals(s))
+			if(selectedBooks.get(i).getCategory().toLowerCase().contains(s.toLowerCase()))
 			{
 				newBooks.add(selectedBooks.get(i));
 			}
