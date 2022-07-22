@@ -78,11 +78,11 @@ public class Library
 	public ArrayList<Book> getBooksWithRating(ArrayList<Book> selectedBooks,double rating)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
-		for(int i = 0; i < selection.size(); i++)
+		for(int i = 0; i < selectedBooks.size(); i++)
 		{
 			if(selection.get(i).getRating() >= rating)
 			{
-				newBooks.add(selection.get(i));
+				newBooks.add(selectedBooks.get(i));
 			}
 		}
 		return newBooks;
