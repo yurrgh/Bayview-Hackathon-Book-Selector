@@ -75,7 +75,7 @@ public class Library
 		}
 		return newBooks;
 	}
-	public ArrayList<Book> getBooksWithRating(ArrayList<Book> selection,double rating)
+	public ArrayList<Book> getBooksWithRating(ArrayList<Book> selectedBooks,double rating)
 	{
 		ArrayList<Book> newBooks = new ArrayList<Book>();
 		for(int i = 0; i < selection.size(); i++)
