@@ -74,7 +74,10 @@ public class Book {
 		return link;
 	}
 	
-	
+	public String toString()
+	{
+		return this.getTitle()+" "+this.getAuthor()+" "+this.getPages()+" "+this.rating+"\n"+this.summary+"\n"+this.link;
+	}
 	
 	
 	
