@@ -76,7 +76,7 @@ public class Book {
 	
 	public String toString()
 	{
-		return this.getTitle()+" "+this.getAuthor()+" "+this.getPages()+" "+this.rating+"\n"+this.summary+"\n"+this.link;
+		return "Title: " +  this.getTitle() + "\n Author: " + this.getAuthor() + "\nPages: " + this.pages + "\nRating: " + this.rating + "\nSummary: " + this.summary + "\nLink: " + this.link;
 	}
 	
 	
