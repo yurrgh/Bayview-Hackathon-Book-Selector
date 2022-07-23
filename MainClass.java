@@ -35,20 +35,19 @@ public class MainClass {
 	public static void selection(int choice) throws FileNotFoundException
 	{
 		Library library = new Library();
-	    System.out.print(library.completeLibrary());
 	    ArrayList<Book> newBooks=library.getBooks();
 			
 			switch(choice)
 			{
 				case 1: newBooks=library.getBooksWithTitle(newBooks,pTitle());
 					break;
-				case 2: newBooks=library.getBooksWithAuthor(newBooks,pTitle());;
+				case 2: newBooks=library.getBooksWithAuthor(newBooks,pAuthor());;
 					break;
-				case 3: newBooks=library.getBooksWithTitle(newBooks,pTitle());;
+				case 3: newBooks=library.getBooksWithGenre(newBooks,pGenre());;
 					break;
-				case 4: newBooks=library.getBooksWithTitle(newBooks,pTitle());;
+				case 4: newBooks=library.getBooksWithPages(newBooks,lPages(),hPages());;
 					break;
-				case 5: newBooks=library.getBooksWithTitle(newBooks,pTitle());;
+				case 5: newBooks=library.getBooksWithRating(newBooks,pRating());;
 			
 			}
 		System.out.print(newBooks);
