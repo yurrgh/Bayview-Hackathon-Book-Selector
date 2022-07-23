@@ -105,14 +105,28 @@ public static String pGenre()
 		}
 	}
 	
-	public static void pPages()
+	public static int hPages()
 	{
-		
+		System.out.println("What is the maximum amount of pages?");
+		Scanner sc= new Scanner(System.in);
+		int high = sc.nextInt();
+		return high;
 	}
-	public static void pRating()
+	public static int lPages()
 	{
-		
+		System.out.println("What is the minumum amount of pages?");
+		Scanner sc= new Scanner(System.in);
+		int low = sc.nextInt();
+		return low;
 	}
+	public static double pRating()
+	{
+		System.out.println("What is the lowest rating?");
+		Scanner sc= new Scanner(System.in);
+		double rate = sc.nextInt();
+		return rate;
+	}
+	
 	
 	
 
