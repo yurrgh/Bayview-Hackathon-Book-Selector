@@ -69,10 +69,42 @@ public class MainClass {
 		String selected = sc.nextLine();
 		return selected;
 	}
-	public static void pGenre()
+public static String pGenre()
 	{
+		System.out.println("1. Fantasy \n2. Sci-fi \n3.Dystopian\n4.Mystery \n5.Horror/Thriller \n6.Historical Fiction \n7.Short Story \n8.Manga \n9.Memoir and Autobiographies \n10.Self-Help \n11.How-To books \n12 Cultural Novels");
+		System.out.println("Please type in the number genre you want name");
+		Scanner sc= new Scanner(System.in);
+		String selected = sc.nextLine();
+		switch(Integer.parseInt(selected))
+		{
+			case 1: return "Fantasy";
+				
+			case 2: return "Sci-Fi";
+				
+			case 3: return "Dystopian";
+				
+			case 4: return "Mystery";
+			
+			case 5: return "Horror";
+			
+			case 6: return "Historical Fiction";
+			
+			case 7: return "Short Story";
+			
+			case 8: return "Manga";
+				
+			case 9: return "Memoir & Autobiography";
+			
+			case 10: return "Self-Help";
+			
+			case 11: return "How-To";
 		
+			case 12: return "Cultural";
+			
+			default: return "Fantasy";//Just chose a random one and it is the first one
+		}
 	}
+	
 	public static void pPages()
 	{
 		
