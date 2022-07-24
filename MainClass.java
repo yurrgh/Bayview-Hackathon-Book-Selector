@@ -32,24 +32,41 @@ public class MainClass {
 		
 	
 	
-	public static void selection(int choice) throws FileNotFoundException
+		public static void selection(int choice) throws FileNotFoundException
 	{
 		Library library = new Library();
 	    ArrayList<Book> newBooks=library.getBooks();
-			
+	    boolean check=true;
+		while(check)
+		{
 			switch(choice)
 			{
 				case 1: newBooks=library.getBooksWithTitle(newBooks,pTitle());
 					break;
-				case 2: newBooks=library.getBooksWithAuthor(newBooks,pAuthor());;
+				case 2: newBooks=library.getBooksWithAuthor(newBooks,pAuthor());
 					break;
-				case 3: newBooks=library.getBooksWithGenre(newBooks,pGenre());;
+				case 3: newBooks=library.getBooksWithGenre(newBooks,pGenre());
 					break;
-				case 4: newBooks=library.getBooksWithPages(newBooks,lPages(),hPages());;
+				case 4: newBooks=library.getBooksWithPages(newBooks,lPages(),hPages());
 					break;
-				case 5: newBooks=library.getBooksWithRating(newBooks,pRating());;
-			
+				case 5: newBooks=library.getBooksWithRating(newBooks,pRating());
 			}
+			System.out.print("Do you wish to add more filters? " );
+		    Scanner sc= new Scanner(System.in);
+			String selected = sc.nextLine();
+			if(selected.equals("y"))
+			{
+				System.out.println("Please select another filter");
+				System.out.println("1. Title \n2. Author \n3. Category/Genre \n4. Pages \n5. Rating \nPlease select your filter");
+				Scanner redo= new Scanner(System.in);
+				choice = sc.nextInt();
+			}
+			else
+			{
+				check=false;
+			}
+			
+		}
 		System.out.print(newBooks);
 		
 	}
