@@ -9,11 +9,18 @@ public class MainClass {
 
 		
 
+
 	public static void main(String[] args) throws FileNotFoundException {
+		System.out.println("Welcome to the Book Selector! \nStruggling to find a book? This program will find a book and get you hooked!\n");
+		boolean check = true;
+		while(check)
+		{
+		check = false;
 	    prompt();
-
-
-	}
+	    check = doYouWantToContinue();
+		}
+		System.out.print("\nWe hope we got you hooked on a book!");
+	
 	
 	public static void prompt() throws FileNotFoundException
 	{
@@ -142,7 +149,13 @@ public static String pGenre()
 		double rate = sc.nextInt();
 		return rate;
 	}
-	
+	public static boolean doYouWantToContinue()
+	{
+		System.out.println("\nDo you wish to find another book");
+		Scanner sc= new Scanner(System.in);
+		Boolean decision = Boolean.parseBoolean(sc.nextLine());
+		return decision;
+	}
 	
 	
 
